@@ -32,10 +32,11 @@ def factorial(n):
 
 
 def fibonacci(n):
-    a, b = 0, 1
-    for _ in range(n):
-        a, b = b, a+b
     if n < 0:
         print("Cannot compute a negative number")
+    elif n == 1:
+        return 0
+    elif n == 2:
+        return 1
     else:
-        return a
+        return fibonacci(n-1) + fibonacci(n-2)
